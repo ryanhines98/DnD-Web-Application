@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <title>UtilnD</title>
+    </head>
+    
+    <body>
+        <div class="background">
+
+        <div class="navbar">
+
+            <div class="whitespace">
+            <h1><a class="nav-link" href="homepage.html">UtilnD</a></h1>
+
+            <div class="nav-signup-login">
+                <div class="nav-login">
+                    <a class="signup-login" href="#">Login</a>
+                </div>
+                
+                <div class="nav-signup">
+                    <a class="signup-login" href="#">Sign Up</a>
+                </div>
+            </div>
+
+            <form class="search" action="#">
+                <button class="searchbtn" id="dp-btn" type="submit"><span class="fas fa-search"></span></button>
+                <div class="dropdown-search" id="dp-search">
+                <input type="text" placeholder="Search.." name="search" autocomplete="off">
+                </div>
+            </form>
+            </div>
+
+        </div>
+
+        <div class="tab-bar">
+            <div class ="whitespace">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#button">Button 4</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="newsfeed whitespace"> 
+            <div class="news-box">
+                <div class="news-main">
+
+                    <div class="news-slide">
+                        <img src="img1_home_example.jpg" class="news-image">
+                    </div>
+
+                    <div class="news-slide">
+                        <img src="img2_home_example.jpg" class="news-image">
+                    </div>
+
+                    <div class="news-slide">
+                        <img src="img3_home_example.jpg" class="news-image">
+                    </div>
+
+                    <div class="news-low">
+                        <div class="dot-container">
+                            <span class="news-dot" onclick="currentSlide(1)"></span>
+                            <span class="news-dot" onclick="currentSlide(2)"></span>
+                            <span class="news-dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+
+                    <div class="news-prev" id="news-left" onclick="plusSlide(-1)">
+                        <span class="fas fa-angle-left"></span>
+                    </div>
+                    <div class="news-next" id="news-right" onclick="plusSlide(1)">
+                        <span class="fas fa-angle-right"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+        <script src="homepage.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,369 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    
+}
+
+body {
+    background-color:rgb(239, 240, 239);
+    
+}
+
+.background {
+    background-color:rgb(239, 240, 239);
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    z-index: 2;
+}
+
+/*the header for top-nav needed line height 0 to keep additional
+and unneccessary margin, space ruining the layout of the top bar*/
+.navbar h1 {
+    line-height:0;
+}
+
+.whitespace {
+    width: 1024px;
+    margin: 0 auto;
+    
+}
+
+/*The following code involves the styling of the TOP BAR*/
+/*---------------------------------------------------------------------*/
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(36, 34, 34);
+    border-bottom-style: solid;
+    border-bottom-color:rgb(165, 33, 33);
+    border-bottom-width: 2px;
+
+    position: relative;
+    z-index: 3;
+}
+
+
+.navbar .nav-link {
+    
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(126, 38, 23);
+    position: relative; 
+    display: inline-block;
+    margin-right: 0px;
+    top:25px;
+    left:10px;
+}
+
+
+/*The following code involves the styling of the SEARCH BAR*/
+/*---------------------------------------------------------------------*/
+
+/*search bar input*/
+.search{
+    float: right;
+    position: relative;
+    display: inline-block;
+    right:10px;
+    top:5px;
+}
+
+.search input[type=text]{
+    width: 350px;
+    padding: 6px 4px;
+    border: 3px solid rgb(54, 53, 53);
+    background-color:transparent /* rgb(36, 34, 34)*/;
+    text-transform: uppercase;
+    transition: .5s;
+    outline: none;
+    color:rgb(126, 38, 23);
+    border-radius: 5px;
+}
+
+.search input::placeholder{
+    color:rgb(126, 38, 23);
+}
+
+.search input[type=text]:focus {
+    border: 3px solid rgb(85, 82, 82);
+}
+
+.dropdown-search {
+    display: inline-block;
+}
+
+/*search bar button*/
+.search .searchbtn{
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgb(54, 53, 53);
+    background-color: transparent;
+    outline: none;
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+    border-radius:50%;
+    transition: .3s;
+}
+
+.search button:hover{
+    color:rgb(100, 100, 100);
+}
+
+.search .searchbtn .fas {
+    font-size: 20px;
+    line-height:0;
+    position:relative;
+    top: 1px;
+}
+
+/*The following code involves the styling of the SIGN-IN/LOGIN*/
+/*---------------------------------------------------------------------*/
+
+.navbar .nav-signup-login {
+    position: relative;
+    top: 2px;
+    
+    display: inline-block;
+    float:right;
+    line-height: 0;
+}
+
+.navbar .nav-signup{
+    border-right-style: solid;
+    border-right-color: rgb(239, 240, 239);
+    border-right-width: 2px;
+
+    display: inline-block;
+    float:inherit;
+
+    width: 60px;
+    height: 38px;
+    padding:0px 6px;
+}
+
+.navbar .nav-login {
+    /*border: 1px solid rgb(0, 174, 255);*/
+    display: inline-block;
+    float:inherit;
+
+    width: 50px;
+    height: 38px;
+    padding:0px 10px;
+}
+
+.navbar .signup-login {
+    text-decoration: none;
+    color:rgb(239, 240, 239);
+    position:relative;
+    top: 20px;
+}
+
+/*The following code involves the styling of the TAB BAR*/
+/*---------------------------------------------------------------------*/
+.tab-bar {
+    width: 100;
+    height: 40px;
+    background-color: rgb(51, 51, 51);
+
+    position: relative;
+    z-index: 3;
+}
+
+.tab-bar ul{
+    list-style-type: none;
+    background-color: rgb(51, 51, 51);
+}
+
+.tab-bar li {
+    float: left;
+}
+
+.tab-bar li a {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    display: block;
+    line-height: 1;
+}
+
+.tab-bar li a:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+/*The following code involves the styling of the RESPONSVE TOP BAR*/
+/*---------------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .whitespace {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 786px) {
+
+    .navbar {
+        
+    }
+
+    .search {
+        top: 0;
+    }
+
+   /* .dropdown-search{
+        display: none;
+    }*/
+
+    .search input[type=text] {
+        position: absolute;
+        background-color: rgb(36, 34, 34);
+        right:0;
+        border-radius: 0;
+        width: 300px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .search .searchbtn {
+        display: inline-block;
+        border-radius: 0px;
+        box-sizing: content-box;
+        width: 32px;
+        height: 32px;
+        padding-bottom: 9px;
+        padding-top: 9px;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: relative;
+        top: -4px;
+        border-top-style: none;
+        border-bottom-style: none;
+        transition: 0s;
+        
+    }
+
+    .search .searchbtn:hover {
+        background-color: rgb(34, 32, 32);
+    }
+
+    /*
+    .search .dropdown-search:hover input[type=text] {
+        display:block;
+    }
+    */
+}
+
+    /*The following code involves the styling of the NEWSFEED*/
+/*---------------------------------------------------------------------*/
+.news-box {
+    position: relative;
+    z-index: 3;
+}
+.news-main {
+    width: 1024px;
+    height: 500px;
+    background-color: rgb(221, 220, 220);
+    box-shadow: 0px 12px 30px 0px rgb(180, 180, 180);
+    border-radius: 15px;
+    
+    position: relative;
+    top: 15px;
+}
+
+.news-low {
+    width: 300px;
+    height: 75px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    box-sizing: border-box;
+
+    position: absolute;
+    bottom: 0;
+    left: 356px;
+    
+    transition: .5s ease;
+}
+
+.news-low:hover {
+    background-color: rgb(0, 0, 0, .8);
+}
+
+.dot-container {
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+.news-dot {
+    width: 22px;
+    height: 22px;
+    margin: 0 10px;
+    background-color: rgb(221, 220, 220, .6);
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.news-dot:hover, .current-dot {
+    background-color: rgba(53, 53, 53, 0.5);
+}
+
+.news-prev, .news-next {
+    height: 80px;
+    width: 50px;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 210px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.news-prev:hover, .news-next:hover {
+    background-color:rgb(0, 0, 0, 0.8);
+}
+
+.news-prev {
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.news-next {
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.news-prev .fas, .news-next .fas {
+    color: rgb(221, 220, 220);
+    font-size: 40px;
+    position: relative;
+    left: 15px;
+    top: 18px;
+}
+
+.news-outline {
+    width: 1024px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.news-slide {
+    /*visibility: hidden;*/
+}
+
+.news-image {
+    width: 1024px;
+    height: 500px;
+    border-radius: 15px;
+
+    transition: width 3s ease .5s;
+}
